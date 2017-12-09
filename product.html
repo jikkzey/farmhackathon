@@ -12,7 +12,22 @@
 <img src="product.jpg">
 <h2>
   請輸入「產銷履歷追朔號碼」：
-  
+  <div id="ListPage" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3 id="title">Header</h3>
+    <a class="ui-btn ui-btn-left" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+     // 點選 back 反向滑回去
+  </div>
+  <div class="ui-content">
+    <ul id="gk-219CcdN" data-role="listview" data-inset="true" is="json-listview" service data-filter="true">
+     // 使用 gk 元件，預留 service 標籤串接公開資料
+      <li>
+        <a href="#ContentPage" data-transition="slide" s1="{{Name}}" s2="{{Add}}" s3="{{Tel}}" s4="{{Opentime}}" s5="{{Description}}">{{Name}}</a>
+      </li>
+    // 先將資料寫入標籤內(比較簡易無腦的做法)
+    </ul>
+  </div>
+</div>
   <br>
   參考網頁：<a href="http://taft.coa.gov.tw/" target=_blank>http://taft.coa.gov.tw/</a>
   </h2>
